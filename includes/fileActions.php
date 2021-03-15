@@ -32,7 +32,7 @@ if(isset($_POST['addfile'])){
 //If post method has been submitted with name set to 'erasefile'
 if(isset($_POST['erasefile'])){
     //Opens the file and empties it
-    if ($file = fopen($GLOBALS['file'], w)) {    
+    if ($file = fopen($GLOBALS['file'], "w")) {    
         ftruncate($file, 0);
         fclose($GLOBALS['file']);
     }
